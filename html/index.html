@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="app" class="hidden side-right">
+        <section id="toastContainer">
+            <article class="toast">
+                <header id="dragHandle" class="toast-header">
+                    <div class="header-side">
+                        <span id="counter" class="count">0/0</span>
+                    </div>
+                    <div class="header-center">
+                        <small id="callAgo" class="time">prave ted</small>
+                    </div>
+                    <div class="header-side right">
+                        <span id="modeBadge" class="mode-badge hidden">EDIT MODE</span>
+                    </div>
+                </header>
+
+                <section id="activeCall" class="toast-body hidden">
+                    <div class="call-head">
+                        <span id="callCode" class="call-code">10-00</span>
+                        <span id="callTitle" class="call-title">DISPATCH</span>
+                    </div>
+                    <p id="callDesc" class="call-message">No active call.</p>
+                    <div id="callMeta" class="call-meta">---</div>
+                </section>
+
+                <section id="empty" class="toast-body empty">
+                    No active dispatch calls.
+                </section>
+
+                <footer id="commands">
+                    <div class="command"><span class="kbd">LEFT</span> Previous</div>
+                    <div class="command"><span class="kbd">G</span> Waypoint</div>
+                    <div class="command"><span class="kbd">RIGHT</span> Next</div>
+                </footer>
+                <div id="resizeHandle" aria-label="Resize dispatch panel"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
